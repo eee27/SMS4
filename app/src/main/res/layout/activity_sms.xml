@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.fuck.eee27.sms4.SMS4Android">
+
+    <CheckBox
+        android:id="@+id/testKeyChk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:text="@string/chk_testKey"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <CheckBox
+        android:id="@+id/timeKeyChk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/chk_timeKey"
+        tools:layout_editor_absoluteX="195dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/text_input_layout_inputTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:counterOverflowTextAppearance="@style/Widget.Design.TextInputLayout"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:scrollbarAlwaysDrawHorizontalTrack="true">
+
+        <EditText
+            android:id="@+id/inputTimeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/input_timeKey"
+            android:inputType="textPersonName"
+            android:selectAllOnFocus="true"
+            android:textSize="14sp"
+            tools:layout_editor_absoluteX="28dp"
+            tools:layout_editor_absoluteY="217dp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/text_input_layout_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:counterOverflowTextAppearance="@style/Widget.Design.TextInputLayout"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:scrollbarAlwaysDrawHorizontalTrack="true">
+
+        <EditText
+            android:id="@+id/inputText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/input_input"
+            android:inputType="textPersonName"
+            android:selectAllOnFocus="true"
+            android:textSize="14sp"
+            tools:layout_editor_absoluteX="28dp"
+            tools:layout_editor_absoluteY="136dp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/enBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_Encode"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="300dp" />
+
+    <Button
+        android:id="@+id/deBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_decode"
+        tools:layout_editor_absoluteX="245dp"
+        tools:layout_editor_absoluteY="300dp" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/text_input_layout_outputTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:counterOverflowTextAppearance="@style/Widget.Design.TextInputLayout"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:scrollbarAlwaysDrawHorizontalTrack="true">
+
+        <EditText
+            android:id="@+id/outputTimeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/output_timeKey"
+            android:inputType="textPersonName"
+            android:lines="2"
+            android:selectAllOnFocus="true"
+            android:singleLine="false"
+            android:textSize="14sp"
+            tools:layout_editor_absoluteX="28dp"
+            tools:layout_editor_absoluteY="430dp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/text_input_layout_output"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:counterOverflowTextAppearance="@style/Widget.Design.TextInputLayout"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:scrollbarAlwaysDrawHorizontalTrack="true">
+
+        <EditText
+            android:id="@+id/outputText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/output_result"
+            android:inputType="textPersonName"
+            android:lines="2"
+            android:selectAllOnFocus="true"
+            android:singleLine="false"
+            android:textSize="14sp"
+            tools:layout_editor_absoluteX="28dp"
+            tools:layout_editor_absoluteY="369dp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/copyTimeBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_timeKeyToClip" />
+
+    <Button
+        android:id="@+id/copyBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_resultToClip" />
+
+
+</LinearLayout>
