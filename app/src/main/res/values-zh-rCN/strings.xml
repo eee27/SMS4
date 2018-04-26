@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SMS4</string>
+    <string name="chk_testKey">使用测试Key</string>
+    <string name="chk_timeKey">使用时间Key</string>
+    <string name="input_input">输入</string>
+    <string name="input_timeKey">输入时间Key</string>
+    <string name="output_result">输出</string>
+    <string name="output_timeKey">输出时间Key</string>
+    <string name="btn_decode">解密</string>
+    <string name="btn_Encode">加密</string>
+    <string name="btn_resultToClip">输出复制到剪贴板</string>
+    <string name="btn_timeKeyToClip">输出时间Key复制到剪贴板</string>
+    <string name="opt_setting">设置</string>
+    <string name="opt_upd">检测更新</string>
+</resources>

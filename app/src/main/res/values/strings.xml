@@ -1,20 +1,6 @@
 <resources>
     <string name="app_name">SMS4</string>
 
-    <!-- Strings related to login -->
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password (optional)</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="error_invalid_email">This email address is invalid</string>
-    <string name="error_invalid_password">This password is too short</string>
-    <string name="error_incorrect_password">This password is incorrect</string>
-    <string name="error_field_required">This field is required</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing email
-    completions."
-    </string>
-
-
     <string name="chk_testKey">"Use Test Key"</string>
     <string name="chk_timeKey">"Use Time"</string>
     <string name="input_input">"Input"</string>
@@ -25,4 +11,9 @@
     <string name="btn_Encode">"Encode"</string>
     <string name="btn_resultToClip">"Result To Clipboard"</string>
     <string name="btn_timeKeyToClip">"Result Time To Clipboard"</string>
+
+    <string name="opt_setting">"Setting"</string>
+    <string name="opt_upd">"Check Updates"</string>
+
+
 </resources>

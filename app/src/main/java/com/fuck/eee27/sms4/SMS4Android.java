@@ -2,8 +2,12 @@ package com.fuck.eee27.sms4;
 
 import android.content.ClipData;
 import android.content.ClipboardManager;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -27,6 +31,11 @@ public class SMS4Android extends AppCompatActivity {
     Button copyBtn = null;
     Button copyTimeBtn = null;
     
+    TextInputLayout inputTextLayout = null;
+    TextInputLayout inputTimeTextLayout = null;
+    TextInputLayout outputTextLayout = null;
+    TextInputLayout outputTimeTextLayout = null;
+    
     private static boolean isTestKey = false;
     private static boolean isTimeKey = false;
     
@@ -38,7 +47,35 @@ public class SMS4Android extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sms);
-        
+    
+        InitAllItem();
+        BindAllAction();
+    }
+    
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+    
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getOrder()) {
+            case 100:
+                Intent intent = new Intent(SMS4Android.this, SettingActivity.class);
+                startActivity(intent);
+                break;
+            case 101:
+                Toast.makeText(this, "1.0", Toast.LENGTH_SHORT).show();
+                break;
+            default:
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+    
+    
+    private boolean InitAllItem() {
         clipboardManager = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
         
         testChk = (CheckBox) findViewById(R.id.testKeyChk);
@@ -52,9 +89,31 @@ public class SMS4Android extends AppCompatActivity {
         copyBtn = (Button) findViewById(R.id.copyBtn);
         copyTimeBtn = (Button) findViewById(R.id.copyTimeBtn);
         
+        inputTextLayout = (TextInputLayout) findViewById(R.id.text_input_layout_input);
+        inputTimeTextLayout = (TextInputLayout) findViewById(R.id.text_input_layout_inputTime);
+        outputTextLayout = (TextInputLayout) findViewById(R.id.text_input_layout_output);
+        outputTimeTextLayout = (TextInputLayout) findViewById(R.id.text_input_layout_outputTime);
+        
+        /*
+        inputTextLayout.setCounterEnabled(true);
+        inputTextLayout.setCounterMaxLength(16);
+        inputTimeTextLayout.setCounterEnabled(true);
+        inputTimeTextLayout.setCounterMaxLength(16);
+        
+        outputTextLayout.setCounterEnabled(true);
+        outputTextLayout.setCounterMaxLength(32);
+        outputTimeTextLayout.setCounterEnabled(true);
+        outputTimeTextLayout.setCounterMaxLength(32);
+        */
+        
         inputTimeText.setEnabled(false);
         outputTimeText.setEnabled(false);
         
+        return true;
+        
+    }
+    
+    private boolean BindAllAction() {
         testChk.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView,
@@ -128,7 +187,7 @@ public class SMS4Android extends AppCompatActivity {
                                        }
         
         );
-        
+        return true;
         
     }
     

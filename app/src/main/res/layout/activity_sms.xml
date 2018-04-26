@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -34,11 +36,11 @@
         android:id="@+id/text_input_layout_inputTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        app:counterOverflowTextAppearance="@style/Widget.Design.TextInputLayout"
+        android:layout_marginTop="10dp"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
-        android:scrollbarAlwaysDrawHorizontalTrack="true">
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        app:counterOverflowTextAppearance="@style/Widget.Design.TextInputLayout">
 
         <EditText
             android:id="@+id/inputTimeText"
@@ -57,11 +59,11 @@
         android:id="@+id/text_input_layout_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        app:counterOverflowTextAppearance="@style/Widget.Design.TextInputLayout"
+        android:layout_marginTop="10dp"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
-        android:scrollbarAlwaysDrawHorizontalTrack="true">
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        app:counterOverflowTextAppearance="@style/Widget.Design.TextInputLayout">
 
         <EditText
             android:id="@+id/inputText"
@@ -96,11 +98,11 @@
         android:id="@+id/text_input_layout_outputTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        app:counterOverflowTextAppearance="@style/Widget.Design.TextInputLayout"
+        android:layout_marginTop="10dp"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
-        android:scrollbarAlwaysDrawHorizontalTrack="true">
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        app:counterOverflowTextAppearance="@style/Widget.Design.TextInputLayout">
 
         <EditText
             android:id="@+id/outputTimeText"
@@ -121,11 +123,11 @@
         android:id="@+id/text_input_layout_output"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        app:counterOverflowTextAppearance="@style/Widget.Design.TextInputLayout"
+        android:layout_marginTop="10dp"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
-        android:scrollbarAlwaysDrawHorizontalTrack="true">
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        app:counterOverflowTextAppearance="@style/Widget.Design.TextInputLayout">
 
         <EditText
             android:id="@+id/outputText"
