@@ -1,11 +1,16 @@
 package com.fuck.eee27.sms4;
 
+import android.app.AlertDialog;
 import android.content.ClipData;
 import android.content.ClipboardManager;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -41,6 +46,7 @@ public class SMS4Android extends AppCompatActivity {
     
     private ClipboardManager clipboardManager;
     private ClipData clipData;
+    private AlertDialog.Builder dialogBuilder;
     
     
     @Override
@@ -66,17 +72,42 @@ public class SMS4Android extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case 101:
-                Toast.makeText(this, "1.0", Toast.LENGTH_SHORT).show();
-                break;
+                if (checkUpd()) {
+                    dialogBuilder.setTitle(R.string.opt_upd).setIcon(R.drawable.ic_launcher_foreground)
+                            .setMessage(R.string.upd_msg)
+                            .setPositiveButton(R.string.upd_upd, new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog,
+                                                    int which) {
+                                    Toast.makeText(SMS4Android.this, R.string.upd_upd_fail, Toast.LENGTH_SHORT)
+                                            .show();
+                                }
+                            }).setNegativeButton(R.string.upd_cancel, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog,
+                                            int which) {
+                        }
+                    });
+                    dialogBuilder.create().show();
+                    break;
+        
+        
+                } else {
+        
+        
+                }
             default:
                 break;
         }
+    
+    
         return super.onOptionsItemSelected(item);
     }
     
     
     private boolean InitAllItem() {
         clipboardManager = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+        dialogBuilder = new AlertDialog.Builder(this);
         
         testChk = (CheckBox) findViewById(R.id.testKeyChk);
         timeChk = (CheckBox) findViewById(R.id.timeKeyChk);
@@ -263,5 +294,24 @@ public class SMS4Android extends AppCompatActivity {
         clipData = ClipData.newPlainText("text", outputTimeText.getText().toString());
         clipboardManager.setPrimaryClip(clipData);
         Toast.makeText(this, "Time Key Already Copy!", Toast.LENGTH_SHORT).show();
+    }
+    
+    private boolean checkUpd() {
+        try {
+            getVersionName();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return true;
+    }
+    
+    private String getVersionName() throws Exception {
+        //获取packagemanager的实例
+        PackageManager packageManager = getPackageManager();
+        //getPackageName()是你当前类的包名，0代表是获取版本信息
+        PackageInfo packInfo = packageManager.getPackageInfo(getPackageName(), 0);
+        Log.e("TAG", "版本号" + packInfo.versionCode);
+        Log.e("TAG", "版本名" + packInfo.versionName);
+        return packInfo.versionName;
     }
 }

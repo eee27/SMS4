@@ -15,5 +15,10 @@
     <string name="opt_setting">"Setting"</string>
     <string name="opt_upd">"Check Updates"</string>
 
+    <string name="upd_msg">"Current Version:1.0   Server Version:1.锟斤拷"</string>
+    <string name="upd_upd">"Update"</string>
+    <string name="upd_cancel">"Cancel"</string>
+    <string name="upd_udp_ing">"Downloading..."</string>
+    <string name="upd_upd_fail">"Cant Download"</string>
 
 </resources>

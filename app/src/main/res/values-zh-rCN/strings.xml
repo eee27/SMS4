@@ -13,4 +13,9 @@
     <string name="btn_timeKeyToClip">输出时间Key复制到剪贴板</string>
     <string name="opt_setting">设置</string>
     <string name="opt_upd">检测更新</string>
+    <string name="upd_msg">当前版本:1.0 服务器版本:1.1锟斤拷</string>
+    <string name="upd_upd">升级</string>
+    <string name="upd_cancel">取消</string>
+    <string name="upd_udp_ing">下崽中...</string>
+    <string name="upd_upd_fail">无法下载!请翻墙!</string>
 </resources>
