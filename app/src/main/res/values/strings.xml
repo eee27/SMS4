@@ -21,4 +21,8 @@
     <string name="upd_udp_ing">"Downloading..."</string>
     <string name="upd_upd_fail">"Cant Download"</string>
 
+    <string name="set_dark_theme">"Dark Theme"</string>
+    <string name="set_use_english">"Use English"</string>
+
+
 </resources>

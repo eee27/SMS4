@@ -18,4 +18,6 @@
     <string name="upd_cancel">取消</string>
     <string name="upd_udp_ing">下崽中...</string>
     <string name="upd_upd_fail">无法下载!请翻墙!</string>
+    <string name="set_dark_theme">使用暗色主题</string>
+    <string name="set_use_english">切换到英语</string>
 </resources>

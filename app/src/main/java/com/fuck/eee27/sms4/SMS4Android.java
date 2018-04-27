@@ -58,6 +58,7 @@ public class SMS4Android extends AppCompatActivity {
         BindAllAction();
     }
     
+    
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);
@@ -73,7 +74,7 @@ public class SMS4Android extends AppCompatActivity {
                 break;
             case 101:
                 if (checkUpd()) {
-                    dialogBuilder.setTitle(R.string.opt_upd).setIcon(R.drawable.ic_launcher_foreground)
+                    dialogBuilder.setTitle(R.string.opt_upd).setIcon(R.drawable.pic)
                             .setMessage(R.string.upd_msg)
                             .setPositiveButton(R.string.upd_upd, new DialogInterface.OnClickListener() {
                                 @Override
@@ -90,11 +91,11 @@ public class SMS4Android extends AppCompatActivity {
                     });
                     dialogBuilder.create().show();
                     break;
-        
-        
+    
+    
                 } else {
-        
-        
+    
+    
                 }
             default:
                 break;
@@ -139,6 +140,8 @@ public class SMS4Android extends AppCompatActivity {
         
         inputTimeText.setEnabled(false);
         outputTimeText.setEnabled(false);
+    
+        setTheme(android.R.style.Theme_Material_Light);
         
         return true;
         
